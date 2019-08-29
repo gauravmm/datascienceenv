@@ -4,14 +4,15 @@ This is the quickest way to get started with Jupyter Notebooks for [Practical Da
 
 To get started with this:
 
-1. (if on Windows) install [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). You need it to be in your `%PATH%`, so use the installer.
-2. install [Vagrant](https://www.vagrantup.com/downloads.html)
-3. (if on Windows) run `vagrant plugin install vagrant-multi-putty` in any directory to install the PuTTY plugin.
-4. install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-5. open terminal/CMD in this directory and run the command `vagrant up`
-6. you will see the virtual machine boot up. This takes ~3 minutes on my laptop. Once you see the prompt `ubuntu-disco login:`, minimize the virtual machine window.
-7. in the original terminal/CMD window, run the command `vagrant ssh` (`vagrant putty` on Windows) to connect to the virtual machine.
-8. you should get a bash shell at `/assignments`. This folder is automatically synced to the `assignments` folder here.
+1. download the contents of this repository and put it somewhere on your computer.
+2. (if on Windows) install [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). You need it to be in your `%PATH%`, so use the installer.
+3. install [Vagrant](https://www.vagrantup.com/downloads.html)
+4. (if on Windows) run `vagrant plugin install vagrant-multi-putty` in any directory to install the PuTTY plugin.
+5. install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+6. open terminal/CMD in this directory and run the command `vagrant up`
+7. you will see the virtual machine boot up. This takes ~3 minutes on my laptop. Once you see the prompt `ubuntu-disco login:`, minimize the virtual machine window.
+8. in the original terminal/CMD window, run the command `vagrant ssh` (`vagrant putty` on Windows) to connect to the virtual machine.
+9. you should get a bash shell at `/assignments`. This folder is automatically synced to the `assignments` folder here.
 
 Great! You have a supported environment set up and ready.
 
