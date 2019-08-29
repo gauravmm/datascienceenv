@@ -8,7 +8,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/disco64"
   config.vm.network "forwarded_port", guest: 8888, host: 8888, host_ip: "127.0.0.1"
-  config.vm.synced_folder "./assignments", "/assignments"
+  config.vm.synced_folder "./assignments", "/home/vagrant/assignments"
 
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
@@ -22,7 +22,8 @@ Vagrant.configure("2") do |config|
       python3 \
       python3-pip
     apt-get clean
-    echo "cd /assignments" >> "$HOME/.bashrc"
+    mkdir .jupyter
+    echo "c.NotebookApp.ip = '*'" > .jupyter/jupyter_notebook_config.py
   SHELL
 
   config.vm.provision "shell", inline: "pip3 install setuptools wheel", run: 'always'
