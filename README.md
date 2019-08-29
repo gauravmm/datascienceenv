@@ -24,3 +24,5 @@ To start working on a homework:
 4. install additional pip requirements for some homeworks. To do that, run `sudo pip3 install -r requirements.txt`. (Running `sudo pip ...` is a *Very Bad Idea* in most cases, this is a rare exception.)
 5. start the Jupyter Notebook with `python3 -m jupyter notebook`. If you get the error `Exception: Jupyter command ``jupyter-notebook`` not found.`, then log out (with Ctrl+D) and log back in (with `vagrant ssh` or `vagrant putty`)
 6. Copy the URL displayed and paste it into your favorite web browser. Jupyter Notebook should load.
+
+To shut down the VM, run `vagrant halt` on your machine or `sudo poweroff` inside the virtual machine.
