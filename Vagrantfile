@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
       python3 \
       python3-pip
     apt-get clean
-    echo "cd /assignments" >> "~/.bashrc"
+    echo "cd /assignments" >> "$HOME/.bashrc"
   SHELL
 
   config.vm.provision "shell", inline: "pip3 install setuptools wheel", run: 'always'
