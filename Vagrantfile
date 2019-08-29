@@ -50,5 +50,5 @@ Vagrant.configure("2") do |config|
   SHELL
 
   config.vm.provision "shell", inline: "pip3 install setuptools wheel", run: 'always'
-  config.vm.provision "shell", inline: "pip3 install -r ~/assignments/requirements.txt", run: 'always'
+  config.vm.provision "shell", inline: "pip3 install -r /home/vagrant/assignments/requirements.txt", run: 'always'
 end
