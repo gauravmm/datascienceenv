@@ -38,7 +38,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
-    apt-get upgrade
+    apt-get upgrade -yq
     apt-get install -yq --no-install-recommends \
       git \
       python3 \
