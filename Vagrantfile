@@ -49,6 +49,7 @@ Vagrant.configure("2") do |config|
     echo "c.NotebookApp.ip = '*'" > .jupyter/jupyter_notebook_config.py
   SHELL
 
+  config.vm.provision "file", source: "requirements.txt", destination: "/home/vagrant/requirements.txt", run: 'always'
   config.vm.provision "shell", inline: "pip3 install setuptools wheel", run: 'always'
-  config.vm.provision "shell", inline: "pip3 install -r /home/vagrant/assignments/requirements.txt", run: 'always'
+  config.vm.provision "shell", inline: "pip3 install -r /home/vagrant/requirements.txt", run: 'always'
 end
