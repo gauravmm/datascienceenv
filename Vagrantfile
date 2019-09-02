@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
     vb.gui = true
+    vb.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ] # Disconnect UART
   end
 
   # From: https://stefanwrobel.com/how-to-make-vagrant-performance-not-suck
@@ -50,7 +51,7 @@ Vagrant.configure("2") do |config|
     chown -R vagrant:vagrant .jupyter
   SHELL
 
+  config.vm.provision "shell", inline: "sudo -Hu vagrant pip3 install setuptools wheel"
   config.vm.provision "file", source: "requirements.txt", destination: "/home/vagrant/requirements.txt", run: 'always'
-  config.vm.provision "shell", inline: "sudo -u vagrant pip3 install setuptools wheel", run: 'always'
-  config.vm.provision "shell", inline: "sudo -u vagrant pip3 install -r /home/vagrant/requirements.txt", run: 'always'
+  config.vm.provision "shell", inline: "sudo -Hu vagrant pip3 install -r /home/vagrant/requirements.txt", run: 'always'
 end

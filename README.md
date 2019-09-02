@@ -26,3 +26,12 @@ To start working on a homework:
 6. Copy the URL displayed and paste it into your favorite web browser. Jupyter Notebook should load.
 
 To shut down the VM, run `vagrant halt` on your machine or `sudo poweroff` inside the virtual machine.
+
+## Upgrading/Resetting
+
+If you are upgrading environment versions, you may need to reset the VM. To do that:
+
+1. run `vagrant halt` to stop the running virtual machine
+2. run `vagrant destroy` to delete the current virtual machine (and keep the assignments folder)
+3. download and replace the previous `datascienceenv` folder (make sure you save your work elsewhere!)
+4. run `vagrant up`
