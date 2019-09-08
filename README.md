@@ -16,7 +16,7 @@ To get started with this:
 
 Great! You have a supported environment set up and ready.
 
-To start working on a homework:
+## To work
 
 1. copy the handout to the `assignments` sub-folder here.
 2. navigate to the folder with `cd` and list files with `ls` to make sure the file is there.
@@ -25,7 +25,17 @@ To start working on a homework:
 5. start the Jupyter Notebook with `python3 -m jupyter notebook`. If you get the error `Exception: Jupyter command ``jupyter-notebook`` not found.`, then log out (with Ctrl+D) and log back in (with `vagrant ssh` or `vagrant putty`)
 6. Copy the URL displayed and paste it into your favorite web browser. Jupyter Notebook should load.
 
-To shut down the VM, run `vagrant halt` on your machine or `sudo poweroff` inside the virtual machine.
+To shut down the VM, run `vagrant halt` on your machine.
+
+### No `assignments` dir
+
+If you are on OSX, you may not see an `assignments` folder. The quickest way to get started is to use the built-in upload and download features:
+
+1. Create a new folder called something other than assignments, for example with `mkdir hw1`
+2. run `python3 -m jupyter notebook hw1`
+3. Open the Jupyter Notebook link in your browser
+4. Use the Jupyter Notebook upload feature to upload data into the VM. You can upload `.tar.gz` or `.tgz` files and untar them using the terminal.
+5. Download your completed Jupyter Notebook for submission by opening the notebook and using File > Download as > IPython Notebook.
 
 ## Upgrading/Resetting
 
