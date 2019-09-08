@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/disco64"
   config.vm.synced_folder "./assignments", "/home/vagrant/assignments"
   config.vm.network "forwarded_port", guest: 8888, host: 8888, host_ip: "127.0.0.1"
+  config.vm.boot_timeout = 600
 
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
